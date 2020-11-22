@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Name>gcloud-backup-docker</Name>
+  <Description>
+    Automatically backup one or more folders to Google Cloud Storage[br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/data[/b] This is where you need to mount your volumes which you want backed up.[br][br]
+    Volumes can be mounted read-only, and you can mount multiple volumes below, for example:[br]
+    - Container volume: /data/documents, Host path: /mnt/user/documents[br]
+    - Container volume: /data/photos, Host path: /mnt/user/media/photos[br][br]
+    You [span style='color: #E80000;']must[/span] set the correct envionment variables for the container. Click on "Advanced view" in the top right and fill in the fields[br]
+    - ACCESS_KEY - your Google Cloud access key[br]
+    - SECRET_KEY - your Google Cloud secret key[br]
+    - GCSPATH - your Google Cloud Storage bucket and path, eg. gs://mybucket/[br]
+    - GCSOPTIONS - Custom parameters to the gsutil command (-d to delete items on the bucken when deleted localy)[br]
+    - CRON_SCHEDULE - Customize how often the backup is executed (default: hourly), "0 3 0 0 0" for once every night[br][br]
+  </Description>
+  <Overview>
+    A simple way to backup important files to Google Cloud Storage
+  </Overview>
+  <Support>https://github.com/vinid223/GcloudStorage-docker</Support>
+  <Registry>https://hub.docker.com/r/vinid223/gcloud-storage-backup</Registry>
+  <GitHub>https://github.com/vinid223/GcloudStorage-docker</GitHub>
+  <Repository>vinid223/gcloud-backup-docker</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+    <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>ACCESS_KEY</Name>
+      <Value>Container Variable: ACCESS_KEY</Value>
+    </Variable>
+    <Variable>
+      <Name>SECRET_KEY</Name>
+      <Value>Container Variable: SECRET_KEY</Value>
+    </Variable>
+    <Variable>
+      <Name>GCSPATH</Name>
+      <Value>gs://mybucket/</Value>
+    </Variable>
+    <Variable>
+      <Name>GCSOPTIONS</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>CRON_SCHEDULE</Name>
+      <Value>0 * * * *</Value>
+    </Variable>
+  </Environment>
+  <Data>
+  </Data>
+  <Banner></Banner>
+  <Icon>https://i.imgur.com/jdjTCs8.png</Icon>
+  <Beta>False</Beta>
+  <Category>Backup: Cloud:</Category>
+  <Changes>
+    [center][font size=5]gcloud-backup-docker Change Log[/font][/center]
+    [font size=4] V1.1.3 [/font]
+    [font size=4] 2020-11-22 [/font]
+    Used a specific tag for the Ubuntu image for a better stability in the future
+    Added a cleanup phase to remove unused packages
+
+    [font size=4] V1.1.2 [/font]
+    [font size=4] 2020-11-21 [/font]
+    Fixed env for home in cron and default GCSOPTIONS value
+
+    [font size=4] V1.1.1 [/font]
+    [font size=4] 2020-11-21 [/font]
+    Fixed default value for GCSOPTIONS
+
+    [font size=4] V1.1 [/font]
+    [font size=4] 2020-11-21 [/font]
+    Fixed permissions for image entrypoint
+
+    [font size=4] V1.0 [/font]
+    [font size=4] 2020-11-21 [/font]
+    Initial Release
+
+  </Changes>
+  <Date>2020-11-21</Date>
+</Containers>
