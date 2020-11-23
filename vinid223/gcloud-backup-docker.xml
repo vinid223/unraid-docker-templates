@@ -13,7 +13,7 @@
     - SECRET_KEY - your Google Cloud secret key[br]
     - GCSPATH - your Google Cloud Storage bucket and path, eg. gs://mybucket/[br]
     - GCSOPTIONS - Custom parameters to the gsutil command (-d to delete items on the bucken when deleted localy)[br]
-    - CRON_SCHEDULE - Customize how often the backup is executed (default: hourly), "0 3 0 0 0" for once every night[br][br]
+    - CRON_SCHEDULE - Customize how often the backup is executed (default: hourly), "0 3 * * *" for once every night at 3am[br][br]
   </Description>
   <Overview>
     A simple way to backup important files to Google Cloud Storage
