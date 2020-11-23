@@ -61,6 +61,8 @@
   <Icon>https://i.imgur.com/jdjTCs8.png</Icon>
   <Beta>False</Beta>
   <Category>Backup: Cloud:</Category>
+  <DonateText>If you like this image or just want to give me a coffee</DonateText>
+  <DonateLink>https://paypal.me/vinid223</DonateLink>
   <Changes>
     [center][font size=5]gcloud-backup-docker Change Log[/font][/center]
     [font size=4] V1.1.4 [/font]
