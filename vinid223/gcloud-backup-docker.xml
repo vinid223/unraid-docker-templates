@@ -50,6 +50,12 @@
     </Variable>
   </Environment>
   <Data>
+    <Volume>
+      <Name>Backup path</Name>
+      <HostDir>/mnt/user/backup</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
   </Data>
   <Banner></Banner>
   <Icon>https://i.imgur.com/jdjTCs8.png</Icon>
