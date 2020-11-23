@@ -21,7 +21,7 @@
   <Support>https://forums.unraid.net/topic/99258-supportcontainer-vinid223s-google-cloud-storage-backup/</Support>
   <Registry>https://hub.docker.com/r/vinid223/gcloud-storage-backup</Registry>
   <GitHub>https://github.com/vinid223/GcloudStorage-docker</GitHub>
-  <Repository>vinid223/gcloud-backup-docker</Repository>
+  <Repository>vinid223/gcloud-storage-backup</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
     <Networking>
