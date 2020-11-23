@@ -53,7 +53,7 @@
     <Volume>
       <Name>Backup path</Name>
       <HostDir>/mnt/user/backup</HostDir>
-      <ContainerDir>/data</ContainerDir>
+      <ContainerDir>/data/backup</ContainerDir>
       <Mode>ro</Mode>
     </Volume>
   </Data>
