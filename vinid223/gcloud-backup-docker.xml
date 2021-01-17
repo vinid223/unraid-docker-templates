@@ -65,6 +65,11 @@
   <DonateLink>https://paypal.me/vinid223</DonateLink>
   <Changes>
     [center][font size=5]gcloud-backup-docker Change Log[/font][/center]
+    [font size=4] V1.1.5 [/font]
+    [font size=4] 2021-01-17 [/font]
+    Updated Ubuntu base image. 
+    Updated Google Cloud SDK installation.
+    
     [font size=4] V1.1.4 [/font]
     [font size=4] 2020-11-22 [/font]
     Fixed an issue with TimeZone not working properly
