@@ -16,7 +16,17 @@
     - CRON_SCHEDULE - Customize how often the backup is executed (default: hourly), "0 3 * * *" for once every night at 3am[br][br]
   </Description>
   <Overview>
-    A simple way to backup important files to Google Cloud Storage
+    A simple way to backup important files to Google Cloud Storage.
+
+    Notes:
+
+    Specific number version are tested versions including the latest tag.
+    Weekly and Monthly build are rebuild images with updated version of the base image, google cloud sdk and apt packets.
+
+    To select a weekly or monthly release, use one of the following tag:
+    - vinid223/gcloud-storage-backup:weekly
+    - vinid223/gcloud-storage-backup:monthly
+
   </Overview>
   <Support>https://forums.unraid.net/topic/99258-supportcontainer-vinid223s-google-cloud-storage-backup/</Support>
   <Registry>https://hub.docker.com/r/vinid223/gcloud-storage-backup</Registry>
@@ -65,6 +75,16 @@
   <DonateLink>https://paypal.me/vinid223</DonateLink>
   <Changes>
     [center][font size=5]google-cloud-backup-docker Change Log[/font][/center]
+    [font size=4] weekly [/font]
+    [font size=4] monthly [/font]
+    Weekly and Monthly build are rebuild images with updated version of the base image, google cloud sdk and apt packets.
+    This might break if Google changes the SDK and the script is not changed to reflect the breaking changes.
+
+    [font size=4] V1.1.7 [/font]
+    [font size=4] 2021-01-31 [/font]
+    Change base image for debian
+    Fix issue with cronjob not triggering and wrong time
+
     [font size=4] V1.1.5 [/font]
     [font size=4] 2021-01-17 [/font]
     Updated Ubuntu base image. 
