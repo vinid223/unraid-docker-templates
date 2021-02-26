@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
-  <Name>gcloud-backup-docker</Name>
+  <Name>google-cloud-storage-backup</Name>
   <Description>
     Automatically backup one or more folders to Google Cloud Storage[br][br]
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
@@ -64,7 +64,7 @@
   <DonateText>If you like this image or just want to give me a coffee</DonateText>
   <DonateLink>https://paypal.me/vinid223</DonateLink>
   <Changes>
-    [center][font size=5]gcloud-backup-docker Change Log[/font][/center]
+    [center][font size=5]google-cloud-backup-docker Change Log[/font][/center]
     [font size=4] V1.1.5 [/font]
     [font size=4] 2021-01-17 [/font]
     Updated Ubuntu base image. 
