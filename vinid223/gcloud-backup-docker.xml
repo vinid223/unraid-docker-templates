@@ -80,6 +80,10 @@
     Weekly and Monthly build are rebuild images with updated version of the base image, google cloud sdk and apt packets.
     This might break if Google changes the SDK and the script is not changed to reflect the breaking changes.
 
+    [font size=4] V1.2.0 [/font]
+    [font size=4] 2021-04-26 [/font]
+    Added the possibility to import the .boto file with a volume instead of using variables.
+
     [font size=4] V1.1.7 [/font]
     [font size=4] 2021-01-31 [/font]
     Change base image for debian
