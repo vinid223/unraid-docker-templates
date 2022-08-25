@@ -9,10 +9,10 @@
     - Container volume: /data/documents, Host path: /mnt/user/documents[br]
     - Container volume: /data/photos, Host path: /mnt/user/media/photos[br][br]
     You [span style='color: #E80000;']must[/span] set the correct envionment variables for the container. Click on "Advanced view" in the top right and fill in the fields[br]
-    - ACCESS_KEY - your Google Cloud access key[br]
-    - SECRET_KEY - your Google Cloud secret key[br]
-    - GCSPATH - your Google Cloud Storage bucket and path, eg. gs://mybucket/[br]
-    - GCSOPTIONS - Custom parameters to the gsutil command (-d to delete items on the bucken when deleted localy)[br]
+    - ACCESS_KEY - your Google Cloud Platform access key for a service account. The string should not contains the character `|`.[br]
+    - SECRET_KEY - your Google Cloud Platform secret key for a service account. The string should not contains the character `|`.[br]
+    - GCSPATH - your Google Cloud Platform bucket and path (ex: gs://personal-backup-bucket/)[br]
+    - GCSOPTIONS - custom parameters to gsutil. (ex: "-d" to have a exact copy of the local files (delete on the bucket files that don't exists anymore) )[br]
     - CRON_SCHEDULE - Customize how often the backup is executed (default: hourly), "0 3 * * *" for once every night at 3am[br][br]
   </Description>
   <Overview>
@@ -21,11 +21,8 @@
     Notes:
 
     Specific number version are tested versions including the latest tag.
-    Weekly and Monthly build are rebuild images with updated version of the base image, google cloud sdk and apt packets.
 
-    To select a weekly or monthly release, use one of the following tag:
-    - vinid223/gcloud-storage-backup:weekly
-    - vinid223/gcloud-storage-backup:monthly
+    If you want to use a config file instead of the variables, please check the readme of the project on Github.
 
   </Overview>
   <Support>https://forums.unraid.net/topic/99258-supportcontainer-vinid223s-google-cloud-storage-backup/</Support>
@@ -75,10 +72,12 @@
   <DonateLink>https://paypal.me/vinid223</DonateLink>
   <Changes>
     [center][font size=5]google-cloud-backup-docker Change Log[/font][/center]
-    [font size=4] weekly [/font]
-    [font size=4] monthly [/font]
-    Weekly and Monthly build are rebuild images with updated version of the base image, google cloud sdk and apt packets.
-    This might break if Google changes the SDK and the script is not changed to reflect the breaking changes.
+
+    [font size=4] V1.3 [/font]
+    [font size=4] 2022-08-25 [/font]
+    Changed base image from ubuntu to alpine
+    Fix and rework the logging system (previously barely working)
+    Updated the handling of the ACCESS_KEY and SECRET_KEY variable while configuring the boto.config file
 
     [font size=4] V1.2.0 [/font]
     [font size=4] 2021-04-26 [/font]
